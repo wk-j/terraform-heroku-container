@@ -15,6 +15,7 @@ heroku logs --app wk-container
 ## Check
 
 - http://localhost/WeatherForecast
+- https://wk-container.herokuapp.com/WeatherForecast
 
 ## Search
 
