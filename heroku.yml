@@ -1,6 +1,6 @@
 build:
   docker:
-    web: Dockerfile
+    web: X.Dockerfile
 
 run:
   web: dotnet MyWeb.dll --urls=http://+:$PORT
