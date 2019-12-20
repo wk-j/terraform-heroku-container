@@ -14,3 +14,9 @@ heroku logs --tail --app wk-container
 ## Check
 
 - http://localhost/WeatherForecast
+
+## Search
+
+```
+container heroku_build filename:main.tf
+```
