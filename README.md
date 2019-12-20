@@ -18,6 +18,6 @@ heroku logs --app wk-container
 
 ## Search
 
-```
+```bash
 container heroku_build filename:main.tf
 ```
