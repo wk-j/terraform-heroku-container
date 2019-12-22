@@ -2,23 +2,23 @@ provider "heroku" {
   version = "~> 2.0"
 }
 
-variable "example_app_name" {
-  description = "App name"
+variable "app_name" {
+  default = "myweb-101"
 }
 
-resource "heroku_app" "example" {
-  name   = "${var.example_app_name}"
+resource "heroku_app" "myweb" {
+  name   = "${var.app_name}"
   region = "us"
   stack  = "container"
 }
 
-resource "heroku_build" "example" {
-  app = "${heroku_app.example.name}"
+resource "heroku_build" "myweb" {
+  app = "${heroku_app.myweb.name}"
   source = {
     path = "./"
   }
 }
 
-output "example_app_url" {
-  value = "https://${heroku_app.example.name}.herokuapp.com"
+output "app_url" {
+  value = "https://${heroku_app.myweb.name}.herokuapp.com"
 }

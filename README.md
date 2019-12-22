@@ -2,11 +2,13 @@
 
 ```bash
 terraform init
-terraform apply -auto-approve -var example_app_name=wk-container
 terraform show
 
-terraform output example_app_url
-terraform destroy -auto-approve -var example_app_name=wk-container
+terraform plan
+terraform output app_url
+
+terraform apply -auto-approve
+terraform destroy -auto-approve
 
 heroku logs --tail --app wk-container
 heroku logs --app wk-container
@@ -15,7 +17,7 @@ heroku logs --app wk-container
 ## Check
 
 - http://localhost/WeatherForecast
-- https://wk-container.herokuapp.com/WeatherForecast
+- https://myweb-101.herokuapp.com/WeatherForecast
 
 ## Search
 
